@@ -1,0 +1,214 @@
+@import '_variables';
+@import '_mixins';
+@import '_components';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400&display=swap');
+
+.debug *, .debug {
+  // outline: solid 1px gold;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: white;
+  font-family: 'Noto Sans TC', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+
+  .logo {
+    margin: 16px;
+  }
+
+  .header__navbar {
+    display: flex;
+    padding: 2px;
+  
+    a {
+      padding: 16px;
+      color: #7a7a7a;
+      font-size: 14px;
+      text-decoration: none;
+      transition: ease-out .2s all;
+
+      &:hover {
+        color: #9dd3a8;
+      }
+    }
+  }
+}
+
+
+.section {
+  position: relative;
+  width: 100%;
+  padding: 30px;
+}
+
+.section__title {
+  font-size: 40px;
+  font-weight: bold;
+  color: #4a4a4a;
+}
+
+.section__desc {
+  margin: 20px 0;
+  font-size: 20px;
+  color: #d1d1d1;
+  line-height: 1.2em;
+}
+
+.section__button {
+  margin: 20px 0;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  background: #9dd3a8;
+  color: white;
+  text-decoration: none;
+  transition: all .2s ease-in;
+
+  &:hover {
+    background: #28A745;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.home {
+  display: flex;
+  justify-content: space-between;
+  background-image: url(./images/cover.jpg);
+  background-size: cover;
+
+  &::after {
+    content:"";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+    position:absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  .home__slogan {
+    z-index: 3;
+  }
+
+
+  .form {
+    z-index: 3;
+    margin: 50px;
+    border-radius: 15px;
+    padding: 25px;
+    width: 32vw;
+    background: white;
+    text-align: center;
+    box-shadow: 0px 2px 11px 1px #594F4F;
+
+
+    h4 {
+      margin: 10px;
+    }
+
+    input, textarea {
+      margin-bottom: 15px;
+      padding: 10px;
+      letter-spacing: .1em;
+    }
+  }
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .about__images {
+    width: 50%;
+    padding: 15px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .about__intro {
+    padding: 5%;
+    width: 50vw;
+  }
+}
+
+.service {
+  background: #F6F9F9;
+  text-align: center;
+
+  .service__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .service__card {
+      display: flex;
+      width: 30%;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px;
+      border-radius: 6px;
+      padding: 50px;
+      background: white;
+      transition: ease-in .2s all;
+      box-shadow: 0px 2px 23px -4px #E0E0E0;
+
+
+      &:hover {
+        transform: scale(1.02);
+        filter: brightness(1.03);
+      }
+
+      .service__icon {
+        width: 50px;
+        height: 50px;
+
+        img {
+          padding: 8px;
+          width: 100%;
+        }
+      }
+
+      h5 {
+        font-weight: bold;
+        font-size: 20px;
+        color: #222222;
+      }
+
+      p {
+        font-size: 14px;
+        color: #4a4a4a;
+      }
+    }
+  }
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+
+  h6 {
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  p {
+    margin-bottom: 4px;
+  }
+}
+
