@@ -15,10 +15,10 @@
   <header class="header">
     <div class="logo">及鴻室內裝修</div>
     <nav class="header__navbar">
-      <a href="#">關於我們</a>
-      <a href="#">服務內容</a>
+      <a href="#about">關於我們</a>
+      <a href="#service">服務內容</a>
       <a href="#">作品集</a>
-      <a href="#">聯繫</a>
+      <a href="#contact">聯繫</a>
     </nav>
   </header>
   <section class="section home">
@@ -28,16 +28,16 @@
     <form class="form">
       <h4>免費諮詢</h4>
       <div class="row">
-          <input type="text" class="form-control" placeholder="姓名">
-          <input type="number" class="form-control" placeholder="電話">
-          <input type="email" class="form-control" placeholder="信箱">
-          <textarea class="form-control" placeholder="諮詢內容"></textarea>
+        <input type="text" class="form-control" placeholder="姓名" required>  
+        <input type="number" class="form-control" placeholder="電話" required>  
+        <input type="email" class="form-control" placeholder="信箱" pattern="[^ @]*@[^ @]*" required>  
+        <textarea class="form-control" placeholder="諮詢內容"></textarea>
       </div>
       <button class="section__button">送出留言</button>
     </form>
   </section>
 
-  <section class="section about">
+  <section class="section about" id="about">
     <div class="about__images">
       <img src="./images/builder.jpg" alt="">
     </div>
@@ -50,7 +50,7 @@
     </div>
   </section>
 
-  <section class="section service">
+  <section class="section service" id="service">
     <h3 class="section__title">服務項目</h3>
     <p class="section__desc">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
@@ -109,7 +109,7 @@
     </div>
   </section>
 
-  <footer class="footer">
+  <footer class="footer" id="contact">
     <div class="logo">及鴻室內裝修</div>
       <div class="footer__info">
         <h6>Open Hours</h6>
@@ -122,5 +122,6 @@
   </footer>
 
 </body>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script type="text/javascript" src="demo.js"></script>
 </html>
