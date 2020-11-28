@@ -19,7 +19,6 @@ function sendMessageAPI(name, phone, email, message, cb) {
     }
   });
 }
-// document.querySelector('#signup').scrollIntoView();
 
 function clearInput() {
   inputName.value = '';
@@ -28,8 +27,9 @@ function clearInput() {
   textareaMessage.value = '';
 }
 
-const btnSendMessage = document.querySelector('.section__button');
-btnSendMessage.addEventListener('click', (e) => {
+
+const form = document.querySelector('.form');
+form.addEventListener('submit', (e) => {
   e.preventDefault();
   const name = inputName.value;
   const phone = inputPhone.value;
@@ -39,6 +39,7 @@ btnSendMessage.addEventListener('click', (e) => {
   sendMessageAPI(name, phone, email, message, (result) => {
     if (result === '成功') {
       clearInput();
+      alert('已收到您的諮詢，我們會盡快回覆！')
     }
   })
 });
