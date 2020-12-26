@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/index.css"],"names":[],"mappings":"AAAA,KACE,sBAAuB,CACvB,QAAS,CACT,SAAU,CACV,8BACF,CAEA,KACE,eAAiB,CACjB,sBACF","file":"main.e9eefe75.chunk.css","sourcesContent":["body {\n  outline: solid 1px gold;\n  margin: 0;\n  padding: 0;\n  font-family: '微軟正黑體', sans-serif;\n}\n\nhtml {\n  background: white;\n  scroll-behavior: smooth;\n}"]}
